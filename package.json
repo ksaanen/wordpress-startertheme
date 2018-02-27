@@ -1,0 +1,37 @@
+{
+  "name": "wordpress-startertheme",
+  "version": "1.0.0",
+  "description": "startertheme for wordpress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server -d --config ./webpack.config.js",
+    "build": "webpack -p --config ./webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/ksaanen/wordpress-startertheme"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "sass",
+    "webpack",
+    "js"
+  ],
+  "devDependencies": {
+    "typescript": "2.7.2",
+    "node-sass":"4.7.2",
+    "webpack": "4.0.1",
+    "webpack-dev-server": "3.0.0",
+    "extract-text-webpack-plugin": "v4.0.0-alpha.0",
+    "webpack-cli":"2.0.9",
+    "ts-loader": "4.0.0",
+    "script-loader": "0.7.2",
+    "css-loader":"0.28.10",
+    "sass-loader":"6.0.6",
+    "style-loader":"0.20.2"
+  },
+  "author": "Kevin Saanen",
+  "license": "MIT"
+}
