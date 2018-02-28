@@ -1,3 +1,4 @@
-@import 'bootstrap/bootstrap';
-@import 'theme/rtl';
-@import 'theme/style';
+@import "~bootstrap/scss/bootstrap";
+
+@import '_s/rtl';
+@import '_s/style';

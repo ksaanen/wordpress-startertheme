@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = {
   entry: './src/webpack.index.ts',
   output: {
-    filename: '[name].js',
+    filename: 'script.bundle.js',
     path: path.resolve(__dirname, './dist/')
   },
   resolve: {
@@ -28,7 +28,7 @@ const config = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename:'[name].css'
+      filename:'../style.css' //put style.css in theme's root directory
     }),
   ],
   devtool: 'source-map'
