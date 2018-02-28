@@ -6,6 +6,8 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
+let jQuery = require('jquery');
+
 ( function( $ ) {
 
 	// Site title and description.
