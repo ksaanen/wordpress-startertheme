@@ -26,16 +26,16 @@
     "popper.js": "1.12.9",
     "bootstrap": "4.0.0",
     "typescript": "2.7.2",
-    "node-sass":"4.7.2",
+    "node-sass": "4.7.2",
     "webpack": "4.0.1",
     "webpack-dev-server": "3.0.0",
     "extract-text-webpack-plugin": "v4.0.0-alpha.0",
-    "webpack-cli":"2.0.9",
+    "webpack-cli": "2.0.9",
     "ts-loader": "4.0.0",
     "script-loader": "0.7.2",
-    "css-loader":"0.28.10",
-    "sass-loader":"6.0.6",
-    "style-loader":"0.20.2"
+    "css-loader": "0.28.10",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.20.2"
   },
   "author": "Kevin Saanen",
   "license": "MIT"
