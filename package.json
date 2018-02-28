@@ -30,6 +30,7 @@
     "webpack": "4.0.1",
     "webpack-dev-server": "3.0.0",
     "extract-text-webpack-plugin": "v4.0.0-alpha.0",
+    "copy-webpack-plugin": "4.4.2",
     "webpack-cli": "2.0.9",
     "ts-loader": "4.0.0",
     "script-loader": "0.7.2",
