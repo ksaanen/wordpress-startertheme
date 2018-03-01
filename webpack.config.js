@@ -36,7 +36,10 @@ const config = {
       filename:'style.css' //put style.css in theme's root directory
     }),
   ],
-  devtool: 'source-map'
+  devtool: 'source-map',
+  devServer: {
+    contentBase: './wwwroot'
+  }
 };
 
 module.exports = config;
