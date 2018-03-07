@@ -22,6 +22,9 @@
   "devDependencies": {
     "@types/bootstrap": "3.3.38",
     "@types/node": "9.4.6",
+    "@types/react": "16.0.40",
+    "@types/axios": "0.14.0",
+    "axios": "0.18.0",
     "popper.js": "1.12.9",
     "bootstrap": "4.0.0",
     "typescript": "2.7.2",

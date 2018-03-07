@@ -1,10 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
  
-export default class World extends React.Component {
+class World extends React.Component {
   render() {
     return <h1>World</h1>
   }
 }
+
+export default World;
  
 ReactDOM.render(<World/>, document.getElementById('world'));

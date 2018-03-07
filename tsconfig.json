@@ -4,7 +4,14 @@
     "module": "commonjs",
     "sourceMap": true,
     "noImplicitAny": false,
-    "jsx": "react"
+    "jsx": "react",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "compileOnSave": true,
   "exclude": [
