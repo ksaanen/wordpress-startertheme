@@ -4,9 +4,16 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const config = {
-  entry: './src/webpack.index.ts',
+  entry: {
+    scripts: [
+      './src/ts/index.ts'
+    ],
+    styles: [
+      './src/scss/index.scss'
+    ]
+  },
   output: {
-    filename: 'script.bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './dist/')
   },
   resolve: {
@@ -33,7 +40,7 @@ const config = {
       to: path.resolve(__dirname, './dist')
     }]),
     new ExtractTextPlugin({
-      filename:'style.css' //put style.css in theme's root directory
+      filename:'[name].bundle.css' //put style.css in theme's root directory
     }),
   ],
   devtool: 'source-map',
