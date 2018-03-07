@@ -31,6 +31,14 @@ const config = {
       {
         test: /\.ts$/,
         loader: 'ts-loader'
+      },
+      {
+        test: /.tsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015', 'react']
+        }
       }
     ]
   },
