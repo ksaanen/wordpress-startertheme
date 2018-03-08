@@ -46,6 +46,10 @@ const config = {
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, './src/layout'),
       to: path.resolve(__dirname, './dist')
+    },
+    {
+      from: path.resolve(__dirname, './src/img'),
+      to: path.resolve(__dirname, './dist')
     }]),
     new ExtractTextPlugin({
       filename:'[name].bundle.css' //put style.css in theme's root directory
