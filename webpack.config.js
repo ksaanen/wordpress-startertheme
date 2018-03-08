@@ -57,6 +57,7 @@ const config = {
   ],
   devtool: 'source-map',
   devServer: {
+    historyApiFallback: true,
     contentBase: './wwwroot/'
   }
 };
