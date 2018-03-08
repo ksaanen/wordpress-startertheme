@@ -1,14 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-class PageHeader extends React.Component {
+class About extends React.Component {
   render() {
     return (
-      <header>
-        
-      </header>
+      <div>
+        <h1>About</h1>
+      </div>
     );
   }
 }
 
-export default PageHeader;
+export default About;

@@ -32,10 +32,10 @@ class Posts extends React.Component {
   // TODO: Make loop trough posts with axios;
 
   render() {
-    return <h3>Posts</h3>
+    return (
+      <h1>Posts</h1>
+    );
   } 
 }
 
 export default Posts;
-
-ReactDOM.render(<Posts/>, document.getElementById('root'));
