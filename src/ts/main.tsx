@@ -11,6 +11,7 @@ import PageSidebar from './layout/sidebar';
 import Posts from './posts';
 import Pages from './pages';
 import About from './about';
+import PageNotFound from './page-not-found';
 
 class Home extends React.Component {
   render() {
@@ -42,6 +43,7 @@ class Main extends React.Component {
                 <Route path="/posts" component={Posts}/>
                 <Route path="/pages" component={Pages}/>
                 <Route path="/about" component={About}/>
+                <Route component={PageNotFound} />
               </Switch>
             
           </main>
