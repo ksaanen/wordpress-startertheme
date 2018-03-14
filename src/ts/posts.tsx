@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import axios from 'axios';
 
 interface PostInterface {
   id: Number;
@@ -67,7 +66,7 @@ class Posts extends React.Component {
         <h1>Posts</h1>
         {
           this.state.posts.map((post, index) => {
-            return <Post key={index} id={post.id} author={post.author} title={post.title} content={post.content} exerpt={post.exerpt || ''} />
+            return <Post key={index} id={post.id} author={post.author} title={post.title} content={post.content} exerpt={post.exerpt} />
           })
         }
       </div>
