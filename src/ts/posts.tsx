@@ -18,6 +18,10 @@ interface PostExerptInterface {
   rendered: String
 }
 
+function HTMLString(string) {
+  return {__html: string};
+}
+
 class Post extends React.Component<PostInterface> {
 
   constructor(props: PostInterface) {
@@ -25,12 +29,15 @@ class Post extends React.Component<PostInterface> {
   }
   
   render() {
+
     return (
       <div key="{this.props.key}" className="wp-post">
         <div className="wp-post--id">{this.props.id}</div>
         <div className="wp-post--author">written by: {this.props.author}</div>
         <div className="wp-post--title">{this.props.title.rendered}</div>
-        <div className="wp-post--content">{this.props.content.rendered}</div>
+        <div className="wp-post--content">
+          <div dangerouslySetInnerHTML={HTMLString(this.props.content.rendered)} />
+        </div>
       </div>
     );
   }
@@ -76,7 +83,7 @@ class Posts extends React.Component<PostsInterfaceProps, PostsInterface> {
         </div>
       );
     }
-    
+
     return (
       <h1>Posts</h1>
     );
