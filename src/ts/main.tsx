@@ -1,5 +1,6 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 // Component imports
 import PageHeader from './components/header';
@@ -10,54 +11,48 @@ import PageSidebar from './components/sidebar';
 import Posts from './posts';
 import About from './about';
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch
-} from 'react-router-dom';
+class Home extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2>Home</h2>
+      </div>
+    );
+  }
+}
 
+class Main extends React.Component {
 
+  render() {
+    return (
+      <div className="container">
+        <PageHeader/>
+          <main>
+          
+              <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/posts">Posts</Link></li>
+                <li><Link to="/about">About</Link></li>
+              </ul> 
+              <hr/>
+              <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/posts" component={Posts}/>
+                <Route path="/about" component={About}/>
+              </Switch>
+            
+          </main>
+        <PageSidebar/>
+        <PageFooter/>
+      </div>
+    );
+  }
+}
 
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-)
-
-const Main = () => (
-  <div className="container">
-
-    <PageHeader/>
-
-    <main>
-
-      <Router>
-        <div>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/posts">Posts</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-
-          <hr/>
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/posts" component={Posts}/>
-            <Route path="/about" component={About}/>
-          </Switch>
-        </div>
-      </Router>
-
-    </main>
-
-    <PageSidebar/>
-
-    <PageFooter/>
-    
-  </div>
-);
+ReactDOM.render((
+  <BrowserRouter>
+    <Main/>
+  </BrowserRouter>
+), document.getElementById('root'));
 
 export default Main;
-
-ReactDOM.render(<Main/>, document.getElementById('root'));

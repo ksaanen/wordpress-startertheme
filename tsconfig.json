@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "es6",
     "sourceMap": true,
-    "noImplicitAny": false,
-    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
     "lib": [
       "es6",
       "dom"
     ],
+    "strict": true,
+    "noImplicitAny": false,
     "typeRoots": [
       "node_modules/@types"
     ]

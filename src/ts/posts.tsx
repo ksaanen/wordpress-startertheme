@@ -1,12 +1,11 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 interface PostInterface {
   id: Number;
   author: Number;
   title: PostTitleInterface;
   content: PostContentInterface;
-  exerpt?: PostExerptInterface;
 }
 
 interface PostTitleInterface {
@@ -21,7 +20,7 @@ interface PostExerptInterface {
 
 class Post extends React.Component<PostInterface> {
 
-  constructor(props:PostInterface) {
+  constructor(props: PostInterface) {
     super(props);
   }
   
@@ -32,21 +31,27 @@ class Post extends React.Component<PostInterface> {
         <div className="wp-post--author">written by: {this.props.author}</div>
         <div className="wp-post--title">{this.props.title.rendered}</div>
         <div className="wp-post--content">{this.props.content.rendered}</div>
-        <div className="wp-post--exerpt">{this.props.exerpt.rendered}</div>
       </div>
     );
   }
-  
 }
 
- 
-class Posts extends React.Component {
+interface PostsInterfaceProps {
+  posts: Array<PostInterface>;
+  hasError: Boolean;
+}
 
-  constructor(props) {
+interface PostsInterface {
+  posts: Array<PostInterface>;
+}
+ 
+class Posts extends React.Component<PostsInterfaceProps, PostsInterface> {
+
+  constructor(props: PostsInterfaceProps) {
     super(props);
 
     this.state = {
-      posts: []
+      posts: this.props.posts
     };
   }
 
@@ -60,16 +65,20 @@ class Posts extends React.Component {
     }
 
   render() {
-
-    return (
-      <div className="wp-posts">
-        <h1>Posts</h1>
-        {
-          this.state.posts.map((post, index) => {
-            return <Post key={index} id={post.id} author={post.author} title={post.title} content={post.content} exerpt={post.exerpt} />
+    if (this.state.posts) {
+      return (
+        <div className="wp-posts">
+          <h1>Posts</h1>
+          {this.state.posts.map((post, index) => {
+            return <Post key={index} id={post.id} author={post.author} title={post.title} content={post.content} />
           })
-        }
-      </div>
+          }
+        </div>
+      );
+    }
+    
+    return (
+      <h1>Posts</h1>
     );
   }
 
