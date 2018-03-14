@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 // Component imports
-import PageHeader from './components/header';
-import PageFooter from './components/footer';
-import PageSidebar from './components/sidebar';
+import PageHeader from './layout/header';
+import PageFooter from './layout/footer';
+import PageSidebar from './layout/sidebar';
 
 // Pages
 import Posts from './posts';
+import Pages from './pages';
 import About from './about';
 
 class Home extends React.Component {
@@ -32,12 +33,14 @@ class Main extends React.Component {
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/posts">Posts</Link></li>
+                <li><Link to="/pages">Pages</Link></li>
                 <li><Link to="/about">About</Link></li>
               </ul> 
               <hr/>
               <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/posts" component={Posts}/>
+                <Route path="/pages" component={Pages}/>
                 <Route path="/about" component={About}/>
               </Switch>
             
