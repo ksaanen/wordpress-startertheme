@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+// const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const config = {
   entry: {
@@ -43,14 +43,14 @@ const config = {
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, './src/layout'),
-      to: path.resolve(__dirname, './dist')
-    },
-    {
-      from: path.resolve(__dirname, './src/img'),
-      to: path.resolve(__dirname, './dist')
-    }]),
+    // new CopyWebpackPlugin([{
+    //   from: path.resolve(__dirname, './src/layout'),
+    //   to: path.resolve(__dirname, './dist')
+    // },
+    // {
+    //   from: path.resolve(__dirname, './src/img'),
+    //   to: path.resolve(__dirname, './dist')
+    // }]),
     new ExtractTextPlugin({
       filename:'[name].bundle.css' //put style.css in theme's root directory
     }),
