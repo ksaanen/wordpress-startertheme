@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { Page, PageInterface } from './components/page';
 
 interface SingleInterface {
-  page: PageInterface;
+  page?: PageInterface;
 }
 
 interface SingleInterfaceProps {
-  page: PageInterface;
+  page?: PageInterface;
 }
  
 class Single extends React.Component<SingleInterfaceProps, SingleInterface> {
