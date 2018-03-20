@@ -11,6 +11,7 @@ import Navbar from './layout/navbar';
 // Pages
 import Posts from './posts';
 import Pages from './pages';
+import Contact from './contact';
 import PageNotFound from './page-not-found';
 import Single from './single';
 
@@ -40,18 +41,25 @@ class Main extends React.Component {
         <Navbar/>
         <div className="container">
           <PageHeader/>
-            <main>
-              <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/posts" component={Posts}/>
-                <Route path="/pages" component={Pages}/>
-                <Route path="/about" component={About}/>
-                <Route component={PageNotFound} />
-              </Switch>
-            </main>
-          <PageSidebar/>
-          <PageFooter/>
+          <div className="row">
+            <div className="col-lg-8">
+              <main>
+                <Switch>
+                  <Route exact path="/" component={Home}/>
+                  <Route path="/posts" component={Posts}/>
+                  <Route path="/pages" component={Pages}/>
+                  <Route path="/about" component={About}/>
+                  <Route path="/contact" component={Contact}/>
+                  <Route component={PageNotFound} />
+                </Switch>
+              </main>
+            </div>
+            <div className="col-lg-4">
+              <PageSidebar/>
+            </div>
+          </div>
         </div>
+        <PageFooter/>
       </div>
     );
   }

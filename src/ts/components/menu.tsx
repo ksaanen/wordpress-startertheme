@@ -11,6 +11,7 @@ class MainMenu extends React.Component {
         <li className="nav-item"><Link className="nav-link" to="/posts">Posts</Link></li>
         <li className="nav-item"><Link className="nav-link" to="/pages">Pages</Link></li>
         <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
+        <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
       </ul>
     );
   }

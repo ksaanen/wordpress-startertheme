@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 class PageSidebar extends React.Component {
   render() {
     return (
-      <aside></aside>
+      <aside>
+        <h2>Sidebar/Aside</h2>
+      </aside>
     );
   }
 }

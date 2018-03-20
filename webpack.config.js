@@ -5,10 +5,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const config = {
   entry: {
-    scripts: [
+    script: [
       './src/ts/index.ts'
     ],
-    styles: [
+    style: [
       './src/scss/index.scss'
     ]
   },
@@ -43,16 +43,20 @@ const config = {
     ]
   },
   plugins: [
+    // new CopyWebpackPlugin([{
+    //   from: path.resolve(__dirname, './src/layout'),
+    //   to: path.resolve(__dirname, './dist')
+    // },
+    // {
+    //   from: path.resolve(__dirname, './src/img'),
+    //   to: path.resolve(__dirname, './dist')
+    // }]),
     new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, './src/layout'),
-      to: path.resolve(__dirname, './dist')
-    },
-    {
-      from: path.resolve(__dirname, './src/img'),
+      from: path.resolve(__dirname, './src/_wp'),
       to: path.resolve(__dirname, './dist')
     }]),
     new ExtractTextPlugin({
-      filename:'[name].bundle.css' //put style.css in theme's root directory
+      filename:'[name].css' //put style.css in theme's root directory
     }),
   ],
   devtool: 'source-map',
