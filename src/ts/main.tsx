@@ -11,15 +11,23 @@ import Navbar from './layout/navbar';
 // Pages
 import Posts from './posts';
 import Pages from './pages';
-import About from './about';
 import PageNotFound from './page-not-found';
+import Single from './single';
 
 class Home extends React.Component {
   render() {
     return (
       <div>
-        <h2>Home</h2>
+        <h1>Home</h1>
       </div>
+    );
+  }
+}
+
+class About extends React.Component {
+  render() {
+    return (
+      <Single />
     );
   }
 }

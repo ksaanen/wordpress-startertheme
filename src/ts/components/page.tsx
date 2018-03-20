@@ -8,10 +8,10 @@ export interface PageInterface {
 }
 
 interface PageTitleInterface {
-  rendered: String
+  rendered?: String | undefined;
 }
 interface PageContentInterface {
-  rendered: String
+  rendered?: String | undefined;
 }
 
 function HTMLString(string) {
